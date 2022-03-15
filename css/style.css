@@ -1,0 +1,161 @@
+:root {
+    --my-padding: 0.4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    color: white;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header menu menu menu"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "main main image image"
+    "main main image image"
+    "main main extra extra"
+    "main main extra extra"
+    "banner banner banner banner"
+    "banner banner banner banner"
+    ;
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header {
+    background-color: black;
+    align-items: center;
+    display: grid;
+    font-size: 50px;
+    font-weight: bold;
+    grid-area: header;
+    padding: var(--my-padding);
+}
+
+.menu {
+    align-items: center;
+    display: grid;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: red;
+    grid-area: menu;
+    padding: var(--my-padding);
+}
+
+.hero {
+    align-items: center;
+    display: grid;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: rgb(65, 80, 146);
+    grid-area: hero;
+    padding: var(--my-padding);
+}
+
+main {
+    align-items: center;
+    display: grid;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: rgb(77, 1, 1);
+    grid-area: main;
+    padding: var(--my-padding);
+}
+
+.image {
+    align-items: center;
+    display: grid;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: rgb(112, 118, 148);
+    grid-area: image;
+    padding: var(--my-padding);
+}
+
+.extra {
+    align-items: center;
+    display: grid;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: rgb(70, 148, 51);
+    grid-area: extra;
+    padding: var(--my-padding);
+}
+
+banner {
+    align-items: center;
+    display: grid;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: rgb(255, 136, 0);
+    grid-area: banner;
+    padding: var(--my-padding);
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns:  1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(14, 1fr);
+        grid-template-areas: 
+        "header header header header"
+        "hero hero hero hero"
+        "hero hero hero hero"
+        "hero hero hero hero"
+        "hero hero hero hero"
+        "menu main main main"
+        "menu main main main"
+        "menu main main main"
+        "menu main main main"
+        "menu main main main"
+        "menu main main main"
+        "menu banner banner banner"
+        "menu banner banner banner"
+        "menu extra extra image"
+        "menu extra extra image"
+        ;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns:  1fr;
+        grid-template-rows: repeat(24, 1fr);
+        grid-template-areas: 
+        "header"
+        "menu"
+        "menu"
+        "hero"
+        "hero"
+        "hero"
+        "hero"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "banner"
+        "banner"
+        "banner"
+        "extra"
+        "extra"
+        "extra"
+        "image"
+        "image"
+        "image"
+        "image"
+        ;
+    }
+}
